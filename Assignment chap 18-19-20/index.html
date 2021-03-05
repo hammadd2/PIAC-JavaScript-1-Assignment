@@ -5,24 +5,23 @@
 	<script type="text/javascript">
 		var courses=[];//Answer 1
 			for(var i=0;i<5;i++){ 
-				courses.push(prompt("Enter Courses Name")); //Answer 2 and 4
-								}
-			
-			alert(courses);//Answer 3
-			
-			for (var j=0;j<5;j++){ //Answer 4
-			courses.splice(j,courses.length,prompt("Edit / Change the Course Name",courses[j]));
-			//courses.splice(0,1,prompt("Edit / Change the Course Name",courses[0]));
-			
+			courses.push(prompt("Enter Courses Name")); //Answer 2 and 4
 			}
-			
+			alert(courses);//Answer 3
+			for (var j=0;j<courses.length;j++){ //Answer 4
+			courses.splice(j,j<courses.length,prompt("Edit / Change the Course Name",courses[j]));
+			//courses.splice(0,1,prompt("Edit / Change the Course Name",courses[0]));
+			}
 			alert(courses); //Answer 5
+			/*var foods = ["Pizza","Burger","Snaks"];
+				for (var i=0; i<foods.length;i++){
+			    console.log(prompt("Welcome to our foods",foods[i]));}*/
 					</script>
 </head>
 <body>
 <h1>JS chapter 18 19 20</h1>
 <hr>
-<p>Java-script assignments chapter 15 16 17</p>
+<p>Java-script assignments chapter 18 19 20</p>
 <h3>Make a TODO</h3>
 <p>
 Customize previous assignment "ch_15_16_17" with for loop...
