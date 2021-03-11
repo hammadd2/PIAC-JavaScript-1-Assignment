@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asssignment - Chapter 31-34 </title>
+	<script type="text/javascript">
+var date=prompt("Type Your DOB (date)");
+var month=prompt("Type Your DOB (month)");
+var year=prompt("Type Your DOB (year)");
+// var dob= console.log(date + " " + month + " " + year);
+var olddate=new Date(month + " " +  date + " " +  year);
+console.log("Your DOB is " + olddate);
+var currentdate=new Date();
+console.log(currentdate.getFullYear()-olddate.getFullYear());
+ var timeDiff=currentdate.getTime()-olddate.getTime();
+ console.log(timeDiff);
+var timeinDay=24*60*60*1000;
+console.log (timeinDay);
+var daysDiff=timeDiff/timeinDay;
+console.log(daysDiff);
+					</script>
+
+<!--
+
+var name=prompt("Type Your Name");
+var date=new Date();
+console.log(date);
+date.getDate(prompt("Type Your DOB (date)", "06"));
+date.getMonth(prompt("Type Your DOB (month)", "03"));
+date.getFullYear(prompt("Type Your DOB (year)", "2021"));
+console.log("Hello",name,"Good Morning");
+var monthList=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var month=date.getMonth();
+var nameMonth=monthList[month];
+var daysList=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var day=date.getDate();
+console.log(day);
+var nameofDay=daysList[day];
+console.log(nameofDay);
+console.log( "Your DOB is " + nameofDay +" " + date.getDate()+ "-"+ nameMonth+ "-" + date.getFullYear());
+-->				
+</head>
+<body>
+<h1>JS chapter 31-34</h1>
+<hr>
+<p>Java-script assignments chapter 31 to 344</p>
+
+<ol>
+<li>
+input your name through prompt. for example name is "Ameen Alam"
+</li>	
+<li>
+input your DOB(date) through prompt. for example date is "24"
+</li>
+<li>input your DOB(month) through prompt. for example month is "05"
+</li>
+<li>input your DOB(year) through prompt. for example year is "1999"
+</li>
+<li>print meassage in console.log() "Hello Ameen Alam, Good Morning, AfterNoon, Evening or Night"</li>
+<li>print meassage in console.log() "Your DOB is {in pakistan standard time format}"</li>
+<li>print meassage in console.log() "You are 20 years 7 Month 10 Days 19 Hours 20 Minutes 25 Seconds old"
+
+<br>"Your Age in Days 7510"</li>
+<li>print meassage in console.log() "How much time left in your next birthday? 161 days 4 hours 39 minutes 34 seconds" or "happy Birth Day Ameen Alam. Today is Your 20th Birthday"</li>
+
+</ol>
+</body>
+</html>
