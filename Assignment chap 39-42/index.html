@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Asssignment 35-38 </title>
+	<title>Asssignment 39-42 </title>
 	<script type="text/javascript">
+			
+		//Answer 1
+			var course1=Math.round(prompt("Linux Marks  (Max:100)"));
+			var course2=Math.round(prompt("HTML Marks  (Max:100)"))
+			var course3=Math.round(prompt("Kubernetes Marks  (Max:100)"))
+			var course4=Math.round(prompt("Docker Marks (Max:100)"))
+			var course5=Math.round(prompt("Java Script Marks (Max:100"))
 
-// First Asssignment
-	var a=prompt("Convert in to Captitalize words");
-	var b=a.split(" ");
-	for (var i = 0; i < b.length; i++) {
-	    b[i] = b[i][0].toUpperCase() + b[i].substr(1);
-	b.join(" ");
-	}
-	console.log(b.join(" "));
+			var totalMarks=course1 + course2 + course3 + course4 + course5
 
-//Second Assignment 
-	function factorial(n){
-				if (n<=1){
-			   		return 1;
-				}
-				else {
-					return n * factorial(n-1);
-				    }
-				}
+			var percentage=totalMarks * 100/500;
+			
 
-				console.log(factorial(prompt("Factorialize a Number")));
-					</script>
+			switch (true){
+			    case (percentage >=90 && percentage <=100):
+			        alert("Grade A+");
+			        break;
+			    case (percentage >=75 && percentage <=89):
+			        alert("Grade A");
+			        break;
+			   case (percentage >=60 && percentage <=74):
+			        alert("Grade B");
+			        break;
+			    case (percentage >=45 && percentage <=60):
+			        alert("Grade C");
+			        break;
+			    case (percentage >=30 && percentage <=44):
+			        alert("Grade D");
+			        break;
+			    case (percentage >=0 && percentage <=29):
+			        alert("Grade F");
+			        break;
+			    
+			    default:
+			        alert("Please Enter Correct Marks");
+			} 
+
+			console.log("TotalMarks: "+ totalMarks + " Percentage " + percentage);
+</script>
+
 
 
 
