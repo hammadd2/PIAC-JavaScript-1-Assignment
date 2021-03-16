@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asssignment 35-38 </title>
+	<script type="text/javascript">
+
+// First Asssignment
+	var a=prompt("Convert in to Captitalize words");
+	var b=a.split(" ");
+	for (var i = 0; i < b.length; i++) {
+	    b[i] = b[i][0].toUpperCase() + b[i].substr(1);
+	b.join(" ");
+	}
+	console.log(b.join(" "));
+
+//Second Assignment 
+	function factorial(n){
+				if (n<=1){
+			   		return 1;
+				}
+				else {
+					return n * factorial(n-1);
+				    }
+				}
+
+				console.log(factorial(prompt("Factorialize a Number")));
+					</script>
+
+
+
+</html>
