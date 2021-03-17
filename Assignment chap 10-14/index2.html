@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Asssignment - Chapter 10-14 </title>
+	<title>Asssignment 2 - Chapter 10-14 </title>
 	<script type="text/javascript">
-		var num1=Number(prompt("enter num1"));
-var num2=Number(prompt("enter num2"));
-var inputvalue=(prompt("Enter operator to calculate"));
-if (inputvalue === "*"){
-    alert(num1 * num2);
-    }
-else if (inputvalue === "+"){
-    alert(num1 + num2);
-    }
-else if (inputvalue === "-"){
-    alert(num1 - num2);
-    }
-else if (inputvalue === "*"){
-    alert(num1 * num2);
-    }
-else if (inputvalue === "/"){
-    alert(num1 / num2);
-    }
-else if(inputvalue === "%"){
-    alert(num1 % num2);
-    }
-else {
-    alert("Please Enter Correct Number or Operator (+ , - , * . / , % ");
-    }
+		var course1=Math.round(prompt("Linux Marks  (Max:100)"));
+		var course2=Math.round(prompt("HTML Marks  (Max:100)"))
+		var course3=Math.round(prompt("Kubernetes Marks  (Max:100)"))
+		var course4=Math.round(prompt("Docker Marks (Max:100)"))
+		var course5=Math.round(prompt("JavaScript Marks (Max:100)"))
+
+		var obtainedMarks=course1 + course2 + course3 + course4 + course5;
+
+		var percentage=obtainedMarks * 100/500;
+
+		if (percentage <= 100 ){
+						alert("Marks Percentage is: " + percentage + "%" );
+			}
+		else {
+			alert ("Incorrect Values, Each course obtained Marks Under 100");
+		}
+		            
 
 </script>
 </head>
