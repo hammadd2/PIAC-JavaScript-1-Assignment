@@ -3,66 +3,55 @@
 <head>
 	<title>Asssignment - Chapter 31-34 </title>
 	<script type="text/javascript">
-		var name=prompt("Type Your Name");
-		var date=prompt("Type Your DOB (date)");
-		var month=prompt("Type Your DOB (month)");
-		var year=prompt("Type Your DOB (year)");
-		// var dob= console.log(date + " " + month + " " + year);
-		var olddate=new Date(month + " " +  date + " " +  year);
-		console.log("Your DOB is " + olddate);
-		var currentdate=new Date();
-		console.log(currentdate.getFullYear()-olddate.getFullYear());
-		 var timeDiff=currentdate.getTime()-olddate.getTime();
-		 console.log(timeDiff);
-		var timeinDay=24*60*60*1000;
-		console.log (timeinDay);
-		var daysDiff=timeDiff/timeinDay;
-		console.log(daysDiff);
+	today = new Date()
+var name=prompt("Enter your Name", "Hammad Ali")
+var date=prompt("Type Your DOB (date)", 12);
+var month=prompt("Type Your DOB (month)", "May");
+var year=prompt("Type Your DOB (year)", 1996);
+var past=new Date(month + " " +  date + " " +  year);
+
+//Mon May 12 1975 00:00:00 GMT+0500 (Pakistan Standard Time) was 16747 days 540 months 45 years ago
+
+function calcDate(date1,date2) {
+    var diff = Math.floor(date1.getTime() - date2.getTime());
+    var day = 1000 * 60 * 60 * 24;
+
+    var days = Math.floor(diff/day);
+    var months = Math.floor(days/31);
+    var years = Math.floor(months/12);
+
+    var message = date2;
+    message += ". You are "+ years + " years "
+    message += months + " Month "
+    message += days + " days " 
+    
+    return message
+    }
+    a = calcDate(today,past)
+console.log("Hello",name,"and Good Afternoon!");
+    console.log(a);
+
+//Month
+var currentMonth=today.getMonth()
+var pastMonth=past.getMonth();
+
+var monthDiff=pastMonth-currentMonth;
+
+
+
+// Days
+var currentDate=today.getDate()
+var pastDate=past.getDate();
+var daysDiff=currentDate-pastDate;
+console.log("How much time left in your next birthday? " + "months: " + monthDiff + " and days: " + daysDiff);
+
+
 							</script>
 
-<!--
 
-var name=prompt("Type Your Name");
-var date=new Date();
-console.log(date);
-date.getDate(prompt("Type Your DOB (date)", "06"));
-date.getMonth(prompt("Type Your DOB (month)", "03"));
-date.getFullYear(prompt("Type Your DOB (year)", "2021"));
-console.log("Hello",name,"Good Morning");
-var monthList=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-var month=date.getMonth();
-var nameMonth=monthList[month];
-var daysList=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-var day=date.getDate();
-console.log(day);
-var nameofDay=daysList[day];
-console.log(nameofDay);
-console.log( "Your DOB is " + nameofDay +" " + date.getDate()+ "-"+ nameMonth+ "-" + date.getFullYear());
--->				
 </head>
 <body>
-<h1>Assignment Chapter 31-34 (Solved)<</h1>
-<hr>
-<p>Java-script assignments chapter 31-34 (Solved)</p>
+<h1>Assignment Chapter 31-34 (Solved)</h1>
 
-<ol>
-<li>
-input your name through prompt. for example name is "Ameen Alam"
-</li>	
-<li>
-input your DOB(date) through prompt. for example date is "24"
-</li>
-<li>input your DOB(month) through prompt. for example month is "05"
-</li>
-<li>input your DOB(year) through prompt. for example year is "1999"
-</li>
-<li>print meassage in console.log() "Hello Ameen Alam, Good Morning, AfterNoon, Evening or Night"</li>
-<li>print meassage in console.log() "Your DOB is {in pakistan standard time format}"</li>
-<li>print meassage in console.log() "You are 20 years 7 Month 10 Days 19 Hours 20 Minutes 25 Seconds old"
-
-<br>"Your Age in Days 7510"</li>
-<li>print meassage in console.log() "How much time left in your next birthday? 161 days 4 hours 39 minutes 34 seconds" or "happy Birth Day Ameen Alam. Today is Your 20th Birthday"</li>
-
-</ol>
 </body>
 </html>

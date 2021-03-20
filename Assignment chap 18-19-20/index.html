@@ -3,19 +3,46 @@
 <head>
 	<title>Asssignment - Chapter 18-19-20 </title>
 	<script type="text/javascript">
-		var courses=[];//Answer 1
-			for(var i=0;i<5;i++){ 
-			courses.push(prompt("Enter Courses Name")); //Answer 2 and 4
-			}
-			alert(courses);//Answer 3
-			for (var j=0;j<courses.length;j++){ //Answer 4
-			courses.splice(j,j<courses.length,prompt("Edit / Change the Course Name",courses[j]));
-			//courses.splice(0,1,prompt("Edit / Change the Course Name",courses[0]));
-			}
-			alert(courses); //Answer 5
-			/*var foods = ["Pizza","Burger","Snaks"];
-				for (var i=0; i<foods.length;i++){
-			    console.log(prompt("Welcome to our foods",foods[i]));}*/
+		today = new Date()
+var date=prompt("Type Your DOB (date)");
+var month=prompt("Type Your DOB (month)");
+var year=prompt("Type Your DOB (year)");
+var past=new Date(month + " " +  date + " " +  year);
+//Mon May 12 1975 00:00:00 GMT+0500 (Pakistan Standard Time) was 16747 days 540 months 45 years ago
+function calcDate(date1,date2) {
+    var diff = Math.floor(date1.getTime() - date2.getTime());
+    var day = 1000 * 60 * 60 * 24;
+
+    var days = Math.floor(diff/day);
+    var months = Math.floor(days/31);
+    var years = Math.floor(months/12);
+
+    var message = date2;
+    message += " You are "+ years + " years "
+    message += months + " Month "
+    message += days + " days " 
+    
+    return message
+    }
+
+
+a = calcDate(today,past)
+console.log(a) 
+function diff_year_month_day(dt1, dt2) 
+     {
+ 
+      var time =(dt2.getTime() - dt1.getTime()) / 1000;
+      var year  = Math.abs(Math.round((time/(60 * 60 * 24))/365.25));
+      var month = Math.abs(Math.round(time/(60 * 60 * 24 * 7 * 4)));
+      var days = Math.abs(Math.round(time/(3600 * 24)));
+      return "Year :- " + year + " Month :- " + month + " Days :-" + days;
+       
+     }
+ 
+    dt1 = new Date("2019-11-27");
+    dt2 = new Date("2018-06-28");
+ 
+    var diff_year_month_day = diff_year_month_day(dt1
 					</script>
 </head>
 <body>
